@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>常用样式</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	</head>
+	<body>
+		<!-- 
+		 1.列表
+			无序列表ul
+			有序列表ol
+			定义列表dl
+		2.代码
+			(1) 使用<code>来显示单行内联代码
+			(2) 使用<pre>来显示多行块代码
+			样式：pre-scrollable(height,max-height高度固定，为340px,超过存在滚动条)
+			(3) 使用<kbd>来显示用户输入代码，如快捷键
+		 -->
+		 
+		 <ul>
+			 <li>无序项目列表一</li>
+			 <li>无序项目列表二</li>
+		 </ul>
+		 <ol>
+			 <li>有序项目列表</li>
+			 <li>有序项目列表</li>
+		 </ol>
+		 <!-- 定义列表 -->
+		 <dl>
+			 <dt>HTML</dt>
+			 <dd>超文本标记语言</dd>
+			 <dt>CSS</dt>
+			 <dd>层叠样式表是一种样式表语言</dd>
+		 </dl>
+		 <hr>
+		 <!-- 去点列表 -->
+		 <ul class="list-unstyled">
+		 	<li>无序项目列表一</li>
+		 	<li>无序项目列表二</li>
+		 </ul>
+		 <!-- 内联列表 -->
+		 <ul class="list-inline">
+			 <li>首页</li>
+			 <li>java学院</li>
+			 <li>在线课堂</li>
+		 </ul>
+		 <!-- 自定义列表 内联列表 -->
+		 <dl class="dl-horizontal">
+			 <dt>HTML超文本标记语言</dt>
+			 <dd>HTML称为超文本标记语言，是一种标识性的语言</dd>
+			 <dt>测试标题不能超过160px的宽度，否则2个点</dt>
+			 <dd>我在写一个水平定义列表的效果，我在写一个水平定义列表的效果。</dd>
+		 </dl>
+		 <hr><br>
+		 this is a simple code<br>
+		 <code>this is a simple code</code> <br>
+		 <!-- 快捷键 -->
+		 <p>使用<kbd>ctrl</kbd>+<kbd>s</kbd>保存内容</p>
+		 <!-- 多行代码 -->
+<pre>
+fileRead = open("file/read.txt","r",encoding="utf-8")
+result = fileRead.readline()#只读一行
+result2 = fileRead.readlines()#返回每行构成的列表
+fileRead.close()
+print(result2)
+<pre>
+	&lt;h2&gt;你好&lt;/h2&gt;
+</pre>
+</pre>
+<!-- 滚动条 -->
+<pre class="pre-scrollable">
+	<ol>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+		<li>..............</li>
+	</ol>
+</pre>
+<hr>
+<br>
+<!-- 
+ tr、th、td提供了五种不同的类名
+ active
+ success
+ info
+ warning
+ danger
+ -->
+<table class="table table-bordered table-hover table-striped table-condensed">
+	<tr class="active">
+		<th>JavaSE</th>
+		<th>数据库</th>
+		<th>JavaScript</th>
+	</tr>
+	<tr class="danger">
+		<td>面向对象</td>
+		<td>oracle</td>
+		<td>json</td>
+	</tr>
+	<tr class="success">
+		<td>数组</td>
+		<td>mysql</td>
+		<td>ajax</td>
+	</tr>
+</table>
+	</body>
+</html>

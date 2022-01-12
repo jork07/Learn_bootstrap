@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模态框</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="./js/jquery-3.6.0.js" charset="UTF-8"></script>
+		<script type="text/javascript" charset="UTF-8" src="bootstrap/js/bootstrap.js"></script>
+	</head>
+	<body>
+		<!-- 通过 data 属性：在控制器元素（比如按钮或者链接）上设置属性 data-toggle="modal"，同时设置 data-target="#identifier" 或 href="#identifier" 来指定要切换的特定的模态框（带有 id="identifier"）。
+			通过 JavaScript：使用这种技术，您可以通过简单的一行 JavaScript 来调用带有 id="identifier" 的模态框： 
+		-->
+		<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">打开模态框</button>
+		<button class="btn btn-primary" id="btn">打开模态框</button>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+		            </div>
+		            <div class="modal-body">在这里添加一些文本</div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		                <button type="button" class="btn btn-primary" id="submit_btn">提交更改</button>
+		            </div>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		<script type="text/javascript">
+			//绑定按钮的点击事件
+			$("#btn").click(function(){
+				//手动打开模态框
+				$("#myModal").modal("show");
+			});
+			//关闭模态框
+			$("#submit_btn").click(function(){
+				$("#myModal").modal("hide")
+			});
+		</script>
+	</body>
+</html>
